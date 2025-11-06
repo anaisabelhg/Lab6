@@ -1,3 +1,17 @@
+import plotly as pl
+import plotly.express as px
+#import numpy as np
+import pandas as pd
+import pathlib
+
+# para hacer dashboards
+#from dash import Dash
+from dash import dcc
+from dash import html
+from dash import dash_table
+from dash.dependencies import Input,Output
+import dash_bootstrap_components as dbc
+
 # Paso 1_: crear app
 app = Dash(__name__)
 
