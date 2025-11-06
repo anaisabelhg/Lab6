@@ -16,6 +16,9 @@ app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 # Linea para Github
 server=app.server
 
+#leer el archivo
+dfc=pd.read_excel("edadmedia.xlsx")
+
 # Paso 2_: layout
 app.layout = html.Div([
     # titulo Dashboard:
