@@ -1,19 +1,17 @@
+#GITHUB incluir en el mismo chunk la carga de los paquetes que usamos (no instalacion)
 import plotly as pl
 import plotly.express as px
 #import numpy as np
 import pandas as pd
 import pathlib
-
-# para hacer dashboards
-#from dash import Dash
-from dash import dcc
-from dash import html
-from dash import dash_table
-from dash.dependencies import Input,Output
+import dash
+#para hacer dashboards
+#from dash import Dash,
+from dash import dcc,html,dash_table,Input,Output
 import dash_bootstrap_components as dbc
 
 # Paso 1_: crear app
-app = Dash(__name__)
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # Linea para Github
 server=app.server
@@ -57,6 +55,7 @@ def update_line_plot(Departamentos):
     )
     return fig
 
+#Paso 5
 if __name__ =="__main__":
     app.run(debug=False,host="0.0.0.0",port=2240)
 
